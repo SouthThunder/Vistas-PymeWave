@@ -4,6 +4,10 @@ controller.access=(req,res)=>{
     res.render('empresa');
 }
 
+controller.register = (req, res)=>{
+    console.log(req.body);
+    res.send('works');
+}
 
 controller.list =(req, res) =>{ //método del objeto controller
     req.getConnection((err, conn)=>{

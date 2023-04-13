@@ -6,5 +6,7 @@ const empresaController = require('../controllers/empresaController')
 
 router.get('/', empresaController.access);
 
+router.post('/add', empresaController.register);
+
 
 module.exports = router;

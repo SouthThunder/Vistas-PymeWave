@@ -5,6 +5,7 @@ const path = require('path');
 const mysql= require('mysql');
 const myConnection = require('express-myconnection');
 const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
 const favicon= require('serve-favicon');
 const engines= require('consolidate');
 
@@ -37,7 +38,7 @@ app.use(myConnection(mysql,{
   port: 3306,
   database: 'PymeWave'
 }, 'single'))
-
+app.use(express.urlencoded({extended: false}));
 
 //routes 
 app.use('/' , customerRoutes);
@@ -46,6 +47,10 @@ app.use('/Who-are-us',docRoute);
 app.use('/signUp', signUpRoute);
 app.use('/signUp/empresa',signUpEmpresaRoute);
 app.use('/signUp/usuario',signUpEmpresaRoute);
+
+
+//Dado que la ruta no esucha constantemente se segmentan las funcionalidades segpun lo que se requira
+//app.post('/add', signUpEmpresaRoute);
 
 
 

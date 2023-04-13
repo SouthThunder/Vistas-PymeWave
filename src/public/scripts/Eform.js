@@ -1,3 +1,4 @@
+
 const form= document.getElementById("form");
 function validarform() {
     var telefono=document.getElementById('Telefono').value;
@@ -46,7 +47,7 @@ form.addEventListener("submit",e => {
     e.preventDefault(); 
     if(validarform()){
         alert("¡Registro Exitoso!, Ya puedes navegar con nosotros");
-        window.location.href="../Views/Home.html";
+       // window.location.href="/";
     }
 });
 
