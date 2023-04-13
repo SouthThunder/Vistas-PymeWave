@@ -6,14 +6,26 @@ const mysql= require('mysql');
 const myConnection = require('express-myconnection');
 const cookieParser = require('cookie-parser');
 const favicon= require('serve-favicon');
+const engines= require('consolidate');
+
 
 
 const app = express();
 
+//Importing routers
+const customerRoutes = require('./routes/home.routes');
+const signInRoute = require('./routes/sign-in.routes');
+const docRoute = require('./routes/doc.routes');
+const signUpRoute = require('./routes/sign-up.routes');
+const signUpEmpresaRoute = require('./routes/empresa.routes');
+const signUpUsuarioRoute = require('./routes/usuario.routes');
+
 
 // settings
 app.set('port', process.env.PORT || 3000); 
-
+app.set('views', __dirname+'/views')
+app.engine('html', engines.mustache);
+app.set('view engine', 'html');
 
 //middlewares
 app.use(morgan('dev'));
@@ -28,7 +40,13 @@ app.use(myConnection(mysql,{
 
 
 //routes 
-app.use('/Pymeweb/home' , require('./routes/home.routes'));
+app.use('/' , customerRoutes);
+app.use('/signIn' , signInRoute);
+app.use('/Who-are-us',docRoute);
+app.use('/signUp', signUpRoute);
+app.use('/signUp/empresa',signUpEmpresaRoute);
+app.use('/signUp/usuario',signUpEmpresaRoute);
+
 
 
 // static files -> frameworks, javascript, stylesheets, images, etc. (Reutilizable en toda la aplicación)

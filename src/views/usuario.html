@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/Pform.css">
+    <link rel="icon" href="/images/Logos/icons8-wave-96.png">
+    
+    <title>Registro</title>
+</head>
+<body>
+    <header>
+        <picture>
+            <a href="/"><img src="../images/Backgrounds/PymeWaveSinFondo.png"></a>
+        </picture>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Registro</h1>
+            <form id="formu">
+                <div class="inputbox">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="email" id="Correo" required>
+                    <label for="">Correo Electronico</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="person"></ion-icon>
+                    <input type="text" id="nombre" required>                   
+                    <label for="">Nombre</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="person"></ion-icon>
+                    <input type="text" id="apellidos"required>
+                    <label for="">Apellidos</label>
+                </div>
+
+                <div class="inputbox">
+                    <ion-icon name="notifications"></ion-icon>
+                    <input type="text" id="Telefono" required >
+                    <label for="">Telefono</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="star"></ion-icon>
+                    <input type="text" id="username"required>
+                    <label for="">Username</label>
+                </div>
+                
+                <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" id="password" required>
+                    <label for="">Contraseña</label>
+                </div>
+                <br>
+                <div class="enter">
+                    <button type="submit">Registrar</button>
+                </div>
+                
+            </form>
+
+
+
+            
+           
+        </div>
+    </main>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="/scripts/Pform.js"></script>
+</body>
+</html>

@@ -8,10 +8,10 @@
 }
 
 body{
-    background-image: url("../images/Fondo_signUp.jpg");
+    background-image: url("/images/Backgrounds/Fondo_signUp.jpg");
     height: 100%;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
     background-position: 0 15%;
 }
 

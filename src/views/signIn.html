@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="/stylesheets/Sign_in.css">
+    <link rel="icon" href="images/Logos/icons8-wave-96.png">
+</head>
+<body>
+    <main>
+        <div class="holder">
+            <div class="logo">
+                <picture>
+                    <a href="/"><img src="/images/Logos/PymeWaveSinFondo.png"></a>
+                </picture>
+            </div>
+            <div class="form">
+                <section>   
+                    <h1>Iniciar sesion</h1>
+                </section>
+                <div class="inputbox">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="text" id="login_user" required>                   
+                    <label for="">Correo</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" id="login_pass" required>
+                    <label for="">Contraseña</label>
+                </div>
+                <br>
+                <div class="enter">
+                    <button type="submit">Ingresar</button>
+                </div>
+                <div class="not-account">
+                    <p>¿No tienes una cuenta? <a href="Sign_up.html">Registrate</a></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

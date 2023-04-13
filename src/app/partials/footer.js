@@ -9,7 +9,7 @@ export class Footer extends React.Component{
                     <p>© 2023 PymeWave, Inc</p>
                     <p><a href="">Terms</a></p>
                     <p><a href="">Privacy</a></p>
-                    <p><a href="Pymewave.html">What is PymeWave?</a></p>
+                    <p><a href="/Who-are-us">What is PymeWave?</a></p>
                 </div>
                 <div class="right">
                     <a href="https://www.facebook.com/"><img src="/images/Social-media/Facebook-icon.png" alt="Facebook"/></a>

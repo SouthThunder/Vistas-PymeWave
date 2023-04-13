@@ -4,6 +4,14 @@
     --tertiaryColor: white;
 } 
 
+header > picture{
+    margin-left: 4rem;
+}
+
+header > picture >a{
+    margin-left: 12rem;
+}
+
 /*Fin header*/
 
 main > picture{

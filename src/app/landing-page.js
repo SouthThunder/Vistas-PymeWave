@@ -5,9 +5,7 @@ import {Footer} from './partials/footer.js';
 import {Home} from './partials/home.js';
 
 
-
-
-class App extends Component{
+class LandingPage extends Component{
     render(){
         return(
             <div>
@@ -17,12 +15,10 @@ class App extends Component{
             </div>
         )
     }
-
 }
 
 
-render(<App/>, document.getElementById('app'));
-
+render(<LandingPage/>, document.getElementById('landing-page'));
 
 
 

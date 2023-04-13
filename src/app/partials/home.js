@@ -4,7 +4,7 @@ import '../../public/stylesheets/Home.css';
 export class Home extends React.Component{
     render(){
         return(
-            <main id="main">
+            <main>
         <picture>
             <img src="/images/Backgrounds/home_main_img.jpg" alt="main"/>
         </picture>
