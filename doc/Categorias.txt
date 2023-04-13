@@ -1,0 +1,25 @@
+categorías: 
+	vehículos
+	Celulares
+	cámaras
+	Videojuegos
+	Consolas
+	computación
+	Televisores
+	Dispositivos de audio
+	Dispositivos de video
+	electrodomésticos
+	Hogar
+	Deportes
+	Belleza
+	Herramientas
+	Ropa
+	Juguetes
+	Salud
+	Mascotas
+	Arte
+	Instrumentos musicales
+	Libros
+	Comics
+	joyería
+	Servicios

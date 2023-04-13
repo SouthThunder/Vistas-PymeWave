@@ -33,7 +33,7 @@ export class SignIn extends Component{
                                 <button type="submit">Ingresar</button>
                             </div>
                             <div class="not-account">
-                                <p>¿No tienes una cuenta? <a href="Sign_up.html">Registrate</a></p>
+                                <p>¿No tienes una cuenta? <a href="/signUp">Registrate</a></p>
                             </div>
                         </div>
                     </div>

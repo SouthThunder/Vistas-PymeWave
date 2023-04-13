@@ -34,7 +34,7 @@ app.use(express.json());// comprueba si el dato es de formato json
 app.use(myConnection(mysql,{
   host: 'localhost',
   user: 'root',
-  password: 'Aerochord-razihel1',
+  password: '12345',
   port: 3306,
   database: 'PymeWave'
 }, 'single'))
@@ -46,7 +46,7 @@ app.use('/signIn' , signInRoute);
 app.use('/Who-are-us',docRoute);
 app.use('/signUp', signUpRoute);
 app.use('/signUp/empresa',signUpEmpresaRoute);
-app.use('/signUp/usuario',signUpEmpresaRoute);
+app.use('/signUp/usuario',signUpUsuarioRoute);
 
 
 //Dado que la ruta no esucha constantemente se segmentan las funcionalidades segpun lo que se requira

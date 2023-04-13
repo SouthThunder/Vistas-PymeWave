@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/Eform.css">
-    <link rel="icon" href="/images/Logos/icons8-wave-96.png">
     
     <title>Registro</title>
     
@@ -13,7 +12,7 @@
 <body>
     <header>
         <picture>
-            <a href="/"><img src="/images/Logos/PymeWaveSinFondo.png"></a>
+            <a href="/"><img  title="logo sin fondo" src="/images/Logos/PymeWaveSinFondo.png"></a>
         </picture>
     </header>
 
@@ -23,27 +22,27 @@
             <form id="form" action="/signUp/empresa/add" method="post" >
                 <div class="inputbox">
                     <ion-icon name="person" ></ion-icon>
-                    <input type="text" id="nombre" name="nombre_empresa" required>                   
+                    <input placeholder="Pyme" type="text" id="nombre" required>                   
                     <label for="">Nombre de la empresa</label>
                 </div>
                 <div class="inputbox">
                     <ion-icon name="mail-outline"></ion-icon>
-                    <input type="email" id="Correo" name="correo" required>
+                    <input placeholder="pyme123@pyme.com" type="email" id="Correo" required>
                     <label for="">Correo Electronico</label>
                 </div>
                 <div class="inputbox">
                     <ion-icon name="notifications"></ion-icon>
-                    <input type="text" id="Telefono" name="telefono" required>
+                    <input placeholder="3139368297" type="text" id="Telefono"  required>
                     <label for="">Telefono:</label>
                 </div>
                 <div class="inputbox">
                     <ion-icon name="home"></ion-icon>
-                    <input type="text" id="Ubicacion" name="dir_fisica" required >
+                    <input placeholder="Bogota" type="text" id="Ubicacion" required >
                     <label for="">Ubicación</label>
                 </div>
                 <div class="inputbox">
                     <ion-icon name="lock-closed-outline"></ion-icon>
-                    <input type="password" id="password" name="contraseña" required>
+                    <input placeholder="********" type="password" id="password" required>
                     <label for="">Contraseña</label>
                 </div>
                 <br>
