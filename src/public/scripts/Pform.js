@@ -55,6 +55,6 @@ form.addEventListener("submit",e => {
     e.preventDefault(); 
     if(validarform()){
         alert("¡Registro Exitoso!, Ya puedes Surfear con nosotros");
-        window.location.href="../Views/Home.html";
+        window.location.href="/signIn";
     }
 });
