@@ -2,6 +2,8 @@ import React, { Component } from"react";
 import {render}  from "react-dom";
 import {Header} from './partials/header.js';
 import {Footer} from './partials/footer.js';
+import {Home} from './partials/home.js';
+
 
 
 
@@ -10,7 +12,7 @@ class App extends Component{
         return(
             <div>
                 <Header/>
-
+                    <Home/>
                 <Footer/>
             </div>
         )
