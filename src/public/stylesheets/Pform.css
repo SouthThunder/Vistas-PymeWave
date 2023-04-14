@@ -94,7 +94,18 @@ form{
     font-size: 1rem;
     padding: 15px 5px 0 5px;
 }
+.inputbox small{
+    color: red;
+    position: absolute;
+    top: 5;
+    bottom: 0;
+    left: 0;
+    visibility: visible;
+}
 
+.inputbox.error small{
+    visibility: visible;
+}
 input:focus ~ label,
 input:valid ~ label,
 input:invalid ~ label{
