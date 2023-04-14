@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/stylesheets/initialHome.css" media="screen and (min-width: 768px)">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Stick+No+Bills">
+    <!-- <script src="../Scripts/Home.js"></script> -->
+    <title>PymeWave</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <picture>
+            <img src="../public/images/Logos/PymeWaveSinFondo(white).png" alt="logo"/>
+        </picture>
+        <nav>
+            <div class="nav_box">
+                <ul>
+                    <li>Services</li>
+                    <li>Products</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <picture>
+            <img src="https://static.timesofisrael.com/blogs/uploads/2019/09/silas-baisch-ceITO2rlDgc-unsplash.jpg" alt="main">
+        </picture>
+        <div class="center">
+            <h1 id="promt">Join The Magic</h1>
+            <form class="search" id="form-search">
+                <div class="input-container"  data-error="Please do not leave this blank">
+                    <input type="search" placeholder="Search here..." id="input-search">
+                </div>
+                <div class="button-container">
+                    <button type="button" id="open-popup-btn" title="botonfilter">
+                        <img src="../public/images/Logos/filter.png" title="filterimg">
+                    </button>
+                </div>
+                <div class="button-container">
+                    <button type="button" onclick="checkSearch()">Search</button>
+                </div>
+                
+              </form>
+              
+        </div>
+
+     
+
+        <div id="results-container"></div>
+    
+        <div id="popup">
+            <h2>Filtrar por categorías</h2>
+            <label><input type="checkbox" name="categoria" value="categoria1"> Categoría 1</label>
+            <label><input type="checkbox" name="categoria" value="categoria2"> Categoría 2</label>
+            <label><input type="checkbox" name="categoria" value="categoria3"> Categoría 3</label>
+            <button id="filter-btn">Filtrar</button>
+        </div>
+
+    </main>
+
+    <script id="resultado-template" type="text/x-handlebars-template">
+        <div class="resultado" data-categoria="{{ categoria }}">{{ nombre }} ({{ categoria }})</div>
+    </script>
+    <script src="../public/scripts/initialHome.js"></script>
+
+
+
+    <footer>
+        <div class="left">
+            <p>© 2023 PymeWave, Inc</p>
+            <p><a href="">Terms</a></p>
+            <p><a href="">Privacy</a></p>
+            <p><a href="Pymewave.html">What is PymeWave?</a></p>
+        </div>
+        <div class="right">
+            <a href="https://www.facebook.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/768px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook"></a>
+            <a href="https://twitter.com/?lang=es"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Twitter-logo.svg/1245px-Twitter-logo.svg.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png" alt="Instagram"></a>
+            <a href="https://discord.com/"><img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="Discord"></a>
+        </div>
+    </footer>
+
+
+    
+</body>
+</html>
