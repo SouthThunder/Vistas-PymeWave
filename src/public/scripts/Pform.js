@@ -87,9 +87,9 @@ function setSuccesFor(input){
 
 form.addEventListener("submit",e => {
     e.preventDefault(); 
-    if(validarform()){
+    if(dataValidation()){
         alert("¡Registro Exitoso!, Ya puedes Surfear con nosotros");
-        window.location.href="/signIn";
+        form.submit();
     }
 });
 

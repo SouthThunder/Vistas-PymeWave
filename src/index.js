@@ -39,7 +39,9 @@ app.use(myConnection(mysql,{
   port: 3306,
   database: 'bhwy37lbeox6xfxg0kfz'
 }, 'single'))
-app.use(express.urlencoded({extended: false}));
+//app.use(express.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
 //routes 
 app.use('/' , customerRoutes);

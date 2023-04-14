@@ -75,7 +75,7 @@ form.addEventListener("submit",e => {
     e.preventDefault(); 
     if(dataValidation()){
         alert("¡Registro Exitoso!, Ya puedes navegar con nosotros");
-        document.getElementById("form").submit();
+        form.submit();
     }
 });
 
