@@ -1,27 +1,37 @@
+const {createHash} =require('crypto');
 const controller= {}; //objeto controller
 
 controller.access=(req,res)=>{
     res.render('usuario');
 }
 
-controller.register=(req, res)=>{
-    res.send('Funciona usuario');
+function hash(string){
+    return createHash('sha256').update(string).digest('hex');
 }
 
-
-controller.list =(req, res) =>{ //método del objeto controller
+function verify_user(data, req){
+    var selectQuery='SELECT * FROM usuario WHERE correo=';
     req.getConnection((err, conn)=>{
-        conn.query('SELECT * from usuario', (err, rows) =>{
+        conn.query(selectQuery, [data.correo]), function(err){
             if(err){
-                next(err); // se maneja de manera mucho más profesional, manejo de errores con next
-                //res.json(err); // se manda el error a la página 
+                console.log("An error has occured\n" +err.message);
             }
-            console.log(rows[0]);
-            res.render('home',{
-                data: rows,
+        };
+    })
+}
+
+controller.register = (req, res)=>{
+    const data = req.body;
+    const insertQuery='INSERT INTO usuario (nombre, apellidos, correo, telefono, username, contraseña) VALUES (?,?,?,?,?,?)';
+        req.getConnection((err,conn) =>{
+            conn.query(insertQuery, [data.nombre, data.apellidos, data.correo, data.telefono, data.user_name ,hash(data.contraseña)], function(err, data){
+                if(err)
+                    console.log("An error has occured");
+                else{
+                    console.log("Entered data");
+                }
             });
-        });
-    });
-};
+        }) 
+}
 
 module.exports = controller;

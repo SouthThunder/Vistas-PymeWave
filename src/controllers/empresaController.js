@@ -1,27 +1,27 @@
+const {createHash} =require('crypto');
 const controller= {}; //objeto controller
+
+function hash(string){
+    return createHash('sha256').update(string).digest('hex');
+}
+
+
+controller.register = (req, res)=>{
+    const data = req.body;
+    const insertQuery='INSERT INTO empresa (nombre_empresa, correo, dir_fisica, estado_suscripcion, telefono, contraseña, rut) VALUES (?,?,?,?,?,?,?)';
+        req.getConnection((err,conn) =>{
+            conn.query(insertQuery, [data.nombre, data.correo, data.ubicacion, 0, data.telefono, hash(data.contraseña), 1], function(err, data){
+                if(err)
+                    console.log("An error has occured");
+                else{
+                    console.log("Entered data");
+                }
+            });
+        }) 
+}
 
 controller.access=(req,res)=>{
     res.render('empresa');
 }
-
-controller.register = (req, res)=>{
-    console.log(req.body);
-    res.send('works');
-}
-
-controller.list =(req, res) =>{ //método del objeto controller
-    req.getConnection((err, conn)=>{
-        conn.query('SELECT * from usuario', (err, rows) =>{
-            if(err){
-                next(err); // se maneja de manera mucho más profesional, manejo de errores con next
-                //res.json(err); // se manda el error a la página 
-            }
-            console.log(rows[0]);
-            res.render('home',{
-                data: rows,
-            });
-        });
-    });
-};
 
 module.exports = controller;

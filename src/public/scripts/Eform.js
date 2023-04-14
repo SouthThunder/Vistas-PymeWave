@@ -39,15 +39,13 @@ var regexEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$/;
         alert("La contraseña debe contener almenos una mayuscula, una minuscula, un numero y un caracter especial")
         return false;
     }
-
-
     return true;
 }
 form.addEventListener("submit",e => {
     e.preventDefault(); 
     if(dataValidation()){
         alert("¡Registro Exitoso!, Ya puedes navegar con nosotros");
-        document.getElementById("form").submit();
+        form.submit();
     }
 });
 
