@@ -33,11 +33,11 @@ app.set('view engine', 'html');
 app.use(morgan('dev'));
 app.use(express.json());// comprueba si el dato es de formato json
 app.use(myConnection(mysql,{
-  host: 'bhwy37lbeox6xfxg0kfz-mysql.services.clever-cloud.com',
-  user: 'uxmjbjwtnb8qhgps',
-  password: 'tIcNGdznTgwKO7i9uyFw',
+  host: 'localhost',
+  user: 'root',
+  password: 'Aerochord-razihel1',
   port: 3306,
-  database: 'bhwy37lbeox6xfxg0kfz'
+  database: 'PymeWave'
 }, 'single'))
 //app.use(express.urlencoded({extended: false}));
 app.use(bodyParser.urlencoded({extended: false}));
