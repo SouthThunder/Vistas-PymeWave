@@ -5,7 +5,9 @@ function dataValidation() {
     var sePudo=true;
     var telefono=document.getElementById('Telefono').value;
     var correo=document.getElementById('Correo').value;
+    var nombre=document.getElementById('nombre').value;
     var password=document.getElementById('password').value;
+    var lugar=document.getElementById('Ubicacion').value;
      // Expresión regular para verificar que el valor contenga únicamente números
     var regexNumeros = /^[0-9]+$/;
 
@@ -14,8 +16,10 @@ function dataValidation() {
     var regexMinuscula = /[a-z]/;
     var regexNumero = /[0-9]/;
     var regexCaracterEspecial = /[!@#$%^&*(),.?":{}|<>]/;
+    var regexCiudadPais = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]+$/i;
 // Expresión regular para verificar que el valor sea una dirección de correo electrónico válida
 var regexEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$/;
+var regexNombreEmpresa = /^[a-zA-Z]{2,}$/
 //Valida que sea un email
     if(!correo.match(regexEmail)){
         setErrorFor(document.getElementById('Correo'),'Por favor, Ingrese una dirección de correo válida');
@@ -24,6 +28,21 @@ var regexEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$/;
     }else{
         setSuccesFor(document.getElementById('Correo'));
     }
+//Valida que es el nombre de una ciudad o pais
+if(!correo.match(regexEmail)){
+    setErrorFor(document.getElementById('Ubicacion'),'Por favor, Ingrese una ubicacion válida');
+    sePudo=false;
+    
+}else{
+    setSuccesFor(document.getElementById('Ubicacion'));
+}
+//Valida que sea un nombre de una empresa
+   if(!nombre.match(regexNombreEmpresa)){
+    setErrorFor(document.getElementById('nombre'),'Ingrese el nombre de la empresa solo alfabetico.');
+        sePudo=false;
+   }else{
+    setSuccesFor(document.getElementById('nombre'));
+}
     //Valida que el telefono tenga únicamente números
     if(!telefono.match(regexNumeros)){
         setErrorFor(document.getElementById('Telefono'),'El telefono debe contener únicamente números.');
