@@ -223,4 +223,7 @@ input:invalid ~ label{
     padding-left: 8.5rem;
     padding-bottom: 2.2rem;
   }
- 
+  .erroresNomE{
+    padding-left: 10.4rem;
+    padding-bottom: 2.2rem;
+  }

@@ -21,7 +21,6 @@ var regexEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$/;
 //Valida que sea un email
     if(!correo.match(regexEmail)){
         setErrorFor(document.getElementById('Correo'),'Por favor, Ingrese una dirección de correo válida');
-        console.log("ss");
         sePudo=false;
     }
     else{

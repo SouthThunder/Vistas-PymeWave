@@ -95,7 +95,7 @@ form{
     padding: 15px 5px 0 5px;
 }
 .inputbox small{
-    color: red;
+    color: #FFA500;
     position: absolute;
     top: 5;
     bottom: 0;
@@ -179,3 +179,15 @@ input:invalid ~ label{
 .right p{
     margin-right: 8%;
 }
+.errores{
+    padding-left: 4.7rem;
+    padding-bottom: 2.2rem;
+  }
+  .erroresContrasenia{
+    padding-left: 5.3rem;
+    padding-bottom: 2.2rem;
+  }
+  .erroresCorreo{
+    padding-left: 8.5rem;
+    padding-bottom: 2.2rem;
+  }
