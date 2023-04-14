@@ -1,4 +1,4 @@
-const resultados = [
+var resultados = [
     { nombre: 'Resultado 1', categoria: 'categoria1' },
     { nombre: 'Resultado 2', categoria: 'categoria2' },
     { nombre: 'Resultado 3', categoria: 'categoria3' },
