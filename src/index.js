@@ -20,6 +20,7 @@ const docRoute = require('./routes/doc.routes');
 const signUpRoute = require('./routes/sign-up.routes');
 const signUpEmpresaRoute = require('./routes/empresa.routes');
 const signUpUsuarioRoute = require('./routes/usuario.routes');
+const pruebaRoute= require('./routes/prueba.routes');
 
 
 // settings
@@ -34,7 +35,7 @@ app.use(express.json());// comprueba si el dato es de formato json
 app.use(myConnection(mysql,{
   host: 'localhost',
   user: 'root',
-  password: '12345',
+  password: 'Aerochord-razihel1',
   port: 3306,
   database: 'PymeWave'
 }, 'single'))
@@ -47,6 +48,7 @@ app.use('/Who-are-us',docRoute);
 app.use('/signUp', signUpRoute);
 app.use('/signUp/empresa',signUpEmpresaRoute);
 app.use('/signUp/usuario',signUpUsuarioRoute);
+app.use('/prueba', pruebaRoute);
 
 
 //Dado que la ruta no esucha constantemente se segmentan las funcionalidades segpun lo que se requira

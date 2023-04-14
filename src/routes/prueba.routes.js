@@ -1,12 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-const usuarioController = require('../controllers/usuarioController')
+const pruebaController = require('../controllers/pruebaController')
 //Controlador, responde cuando alguien viene a la ruta del servidor 
 
-router.get('/', usuarioController.access);
-
-router.post('/add', usuarioController.register);
+router.get('/', pruebaController.render);
 
 
 module.exports = router;

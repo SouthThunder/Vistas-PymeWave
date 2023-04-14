@@ -4,6 +4,10 @@ controller.access=(req,res)=>{
     res.render('usuario');
 }
 
+controller.register=(req, res)=>{
+    res.send('Funciona usuario');
+}
+
 
 controller.list =(req, res) =>{ //método del objeto controller
     req.getConnection((err, conn)=>{
