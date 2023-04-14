@@ -15,23 +15,23 @@
                     <a href="/"><img title = "logo sin fondo" src="/images/Logos/PymeWaveSinFondo.png"></a>
                 </picture>
             </div>
-            <form class="form">
+            <form class="form" method="post" action="sign">
                 <section>   
                     <h1>Iniciar sesion</h1>
                 </section>
                 <div class="inputbox">
                     <ion-icon name="mail-outline"></ion-icon>
-                    <input title="username" type="text" id="login_user" required>                   
+                    <input title="username" type="text" id="login_user" name="correo" required>                   
                     <label for="">Correo</label>
                 </div>
                 <div class="inputbox">
                     <ion-icon name="lock-closed-outline"></ion-icon>
-                    <input title="Userpassword" type="password" id="login_pass" required>
+                    <input title="Userpassword" type="password" id="login_pass" name="contraseña" required>
                     <label for="">Contraseña</label>
                 </div>
                 <br>
                 <div class="enter">
-                    <button type="submit">Ingresar</button>
+                    <button onclick="">Ingresar</button>
                 </div>
                 <div class="not-account">
                     <p>¿No tienes una cuenta? <a href="/signUp">Registrate</a></p>
