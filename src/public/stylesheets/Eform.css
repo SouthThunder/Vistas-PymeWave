@@ -36,9 +36,10 @@ main{
 }
 
 .container{
+    
     margin: 0 auto;
     width: 40%;
-    height: 80%;
+    height: 100%;
     background-color: #202C3F;
     opacity: 0.95;
     border-radius: 3rem;
@@ -84,6 +85,16 @@ form{
     pointer-events: none;
     transition: 0.5s;
 }
+.inputbox h5{
+    position: absolute;
+    top: -5%;
+    left: 5px;
+    
+    color: whitesmoke;
+    font-size: 0.9rem;
+    pointer-events: none;
+    transition: 0.5s;
+}
 
 .inputbox input{
     width: 100%;
@@ -96,16 +107,19 @@ form{
 }
 
 .inputbox small{
-    color: red;
+    color: #FFA500;
     position: absolute;
-    margin-top: 8px;
     bottom: 0;
     left: 0;
+    width: 100%;
     visibility: hidden;
 }
 
 .inputbox.error small{
     visibility: visible;
+}
+.inputbox.sucess small{
+    visibility: hidden;
 }
 
 input:focus ~ label,
@@ -179,15 +193,29 @@ input:invalid ~ label{
     margin-right: 8%;
 }
 
-select {
+.inputbox select {
     margin-bottom: 10px;
-    margin-top: 10px;
+    margin-top: 4%;
     font-family: cursive, sans-serif;
     outline: 0;
-    background: blue;
-    color: black;
-    border: 1px solid crimson;
+    background: #202C3F;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
     padding: 4px;
+    width: 100%;
     border-radius: 9px;
     overflow-y: scroll;
   }
+  .errores{
+    padding-left: 4.7rem;
+    padding-bottom: 2.2rem;
+  }
+  .erroresContrasenia{
+    padding-left: 5.3rem;
+    padding-bottom: 2.2rem;
+  }
+  .erroresCorreo{
+    padding-left: 8.5rem;
+    padding-bottom: 2.2rem;
+  }
+ 

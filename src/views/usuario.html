@@ -20,40 +20,46 @@
             <h1>Registro</h1>
             <form id="formu" method="post" action="/signUp/usuario/add">
                 <div class="inputbox">
+                    <small class="errores">Error message</small>
                     <ion-icon name="mail-outline"></ion-icon>
                     <input placeholder="pepe123@gmail.com" type="email" id="Correo" required>
                     <label for="">Correo Electronico</label>
                 </div>
                 <div class="inputbox">
+                    <small class="errores">Error message</small>
                     <ion-icon name="person"></ion-icon>
                     <input  placeholder="pepe" type="text" id="nombre" required>                   
                     <label for="">Nombre</label>
                 </div>
                 <div class="inputbox">
+                    <small class="errores">Error message</small>
                     <ion-icon name="person"></ion-icon>
                     <input placeholder="Gonzales" type="text" id="apellidos"required>
                     <label for="">Apellidos</label>
                 </div>
 
                 <div class="inputbox">
+                    <small class="errores">Error message</small>
                     <ion-icon name="notifications"></ion-icon>
                     <input placeholder="3187927635" type="text" id="Telefono" required >
                     <label for="">Telefono</label>
                 </div>
                 <div class="inputbox">
+                    <small class="errores">Error message</small>
                     <ion-icon name="star"></ion-icon>
                     <input placeholder="pepe123" type="text" id="username"required>
                     <label for="">Username</label>
                 </div>
                 
                 <div class="inputbox">
+                    <small class="errores">Error message</small>
                     <ion-icon name="lock-closed-outline"></ion-icon>
                     <input placeholder="********" type="password" id="password" required>
                     <label for="">Contraseña</label>
                 </div>
                 <br>
                 <div class="enter">
-                    <button type="submit">Registrar</button>
+                    <button onclick="validarform()">Registrar</button>
                 </div>
                 
             </form>

@@ -21,37 +21,40 @@
             <h1>Registro</h1>
             <form id="form" action="/signUp/empresa/add" method="post" >
                 <div class="inputbox">
+                    <small class="errores">Error message</small>
                     <ion-icon name="person" ></ion-icon>
                     <input  type="text" id="nombre" required>                   
                     <label for="nomEmpresa">Nombre de la empresa</label>
-                    <small>Error message</small>
+    
                 </div>
                 <div class="inputbox">
+                    <small class="erroresCorreo">Error message</small>
                     <ion-icon name="mail-outline"></ion-icon>
                     <input  type="email" id="Correo" required>
                     <label for="">Correo Electronico</label>
-                    <small>Error message</small>
+                    
                 </div>
-                <div class="inputbox">
+                <div class="inputbox"> 
+                    <small class="errores">Error message</small>
                     <ion-icon name="notifications"></ion-icon>
                     <input  type="text" id="Telefono"  required>
                     <label for="">Telefono:</label>
-                    <small>Error message</small>
                 </div>
                 <div class="inputbox">
+                    <small>Error message</small>
                     <ion-icon name="home"></ion-icon>
                     <input  type="text" id="Ubicacion" required >
                     <label for="">Ubicación</label>
-                    <small>Error message</small>
+                    
                 </div>
                 <div class="inputbox">
+                    <small class="erroresContrasenia">Error message</small>
                     <ion-icon name="lock-closed-outline"></ion-icon>
                     <input  type="password" id="password" required>
                     <label for="">Contraseña</label>
-                    <small>Error message</small>
                 </div>
-                <div>
-                    <label for="">Categorias</label>
+                <div class="inputbox">
+                    <h5>Categorias</h5>
                     <select name="opciones[]" id="opciones" multiple size="3">
                         <option value="opcion1">vehículos</option>
                         <option value="opcion2">Celulares</option>
