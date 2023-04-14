@@ -21,6 +21,7 @@ const signUpRoute = require('./routes/sign-up.routes');
 const signUpEmpresaRoute = require('./routes/empresa.routes');
 const signUpUsuarioRoute = require('./routes/usuario.routes');
 const pruebaRoute= require('./routes/prueba.routes');
+const initialHome= require('./routes/initialHome.routes');
 
 
 // settings
@@ -51,6 +52,7 @@ app.use('/signUp', signUpRoute);
 app.use('/signUp/empresa',signUpEmpresaRoute);
 app.use('/signUp/usuario',signUpUsuarioRoute);
 app.use('/prueba', pruebaRoute);
+app.use('/initialHome',initialHome);
 
 
 //Dado que la ruta no esucha constantemente se segmentan las funcionalidades segpun lo que se requira
