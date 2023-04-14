@@ -36,7 +36,7 @@ app.use(express.json());// comprueba si el dato es de formato json
 app.use(myConnection(mysql,{
   host: 'localhost',
   user: 'root',
-  password: 'Aerochord-razihel1',
+  password: '12345',
   port: 3306,
   database: 'PymeWave'
 }, 'single'))

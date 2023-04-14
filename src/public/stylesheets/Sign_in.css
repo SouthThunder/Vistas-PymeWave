@@ -141,3 +141,18 @@ input:valid ~ label{
 .form a{
     color: #7DA9DB;
 }
+.inputbox small{
+    color: #FFA500;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    visibility: visible;
+}
+
+.inputbox.error small{
+    visibility: visible;
+}
+.inputbox.sucess small{
+    visibility: hidden;
+}

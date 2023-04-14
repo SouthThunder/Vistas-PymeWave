@@ -15,23 +15,25 @@
                     <a href="/"><img title = "logo sin fondo" src="/images/Logos/PymeWaveSinFondo.png"></a>
                 </picture>
             </div>
-            <form class="form" method="post" action="/signIn/sign">
+            <form class="form"id="form" method="post" action="/signIn/sign">
                 <section>   
                     <h1>Iniciar sesion</h1>
                 </section>
                 <div class="inputbox">
                     <ion-icon name="mail-outline"></ion-icon>
-                    <input title="username" type="text" id="login_user" name="correo" required>                   
+                    <small class="erroresCorreo">Error message</small>
+                    <input title="username" type="text" id="login_user" name="correo" >                   
                     <label for="">Correo</label>
                 </div>
                 <div class="inputbox">
                     <ion-icon name="lock-closed-outline"></ion-icon>
-                    <input title="Userpassword" type="password" id="login_pass" name="contraseña" required>
+                    <small class="erroresContrasenia">Error message</small>
+                    <input title="Userpassword" type="password" id="login_pass" name="contraseña" >
                     <label for="">Contraseña</label>
                 </div>
                 <br>
                 <div class="enter">
-                    <button onclick="">Ingresar</button>
+                    <button onclick="dataValidation()">Ingresar</button>
                 </div>
                 <div class="not-account">
                     <p>¿No tienes una cuenta? <a href="/signUp">Registrate</a></p>
@@ -39,7 +41,9 @@
             </form>
         </div>
     </main>
+    
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="/scripts/Signin.js"></script>
 </body>
 </html>
