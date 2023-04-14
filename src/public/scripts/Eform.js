@@ -1,6 +1,6 @@
 
 const form= document.getElementById("form");
-function validarform() {
+function dataValidation() {
     var telefono=document.getElementById('Telefono').value;
     var correo=document.getElementById('Correo').value;
     var password=document.getElementById('password').value;
@@ -45,9 +45,9 @@ var regexEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$/;
 }
 form.addEventListener("submit",e => {
     e.preventDefault(); 
-    if(validarform()){
+    if(dataValidation()){
         alert("¡Registro Exitoso!, Ya puedes navegar con nosotros");
-        window.location.href="/signIn";
+        document.getElementById("form").submit();
     }
 });
 
