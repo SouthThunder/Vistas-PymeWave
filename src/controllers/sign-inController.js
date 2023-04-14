@@ -4,8 +4,6 @@ controller.render =(req, res)=>{
     res.render('signIn');
 }
 
-
-
 controller.access =(req, res)=>{
     req.getConnection((err,conn)=>{
         conn.query('SELECT * from usuario', (err,rows)=>{

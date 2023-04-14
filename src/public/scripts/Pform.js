@@ -1,5 +1,5 @@
-const form= document.getElementById("formu");
-function validarform() {
+const form= document.getElementById("form");
+function dataValidation() {
     var sePudo=true;
     var telefono=document.getElementById('Telefono').value;
     var correo=document.getElementById('Correo').value;
@@ -88,7 +88,6 @@ function setSuccesFor(input){
 form.addEventListener("submit",e => {
     e.preventDefault(); 
     if(dataValidation()){
-        alert("¡Registro Exitoso!, Ya puedes Surfear con nosotros");
         form.submit();
     }
 });
