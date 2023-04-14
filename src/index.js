@@ -8,6 +8,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const favicon= require('serve-favicon');
 const engines= require('consolidate');
+const handlebars= require('express-handlebars');
 
 
 
@@ -36,7 +37,7 @@ app.use(express.json());// comprueba si el dato es de formato json
 app.use(myConnection(mysql,{
   host: 'localhost',
   user: 'root',
-  password: '12345',
+  password: 'Aerochord-razihel1',
   port: 3306,
   database: 'PymeWave'
 }, 'single'))
