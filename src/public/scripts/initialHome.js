@@ -20,7 +20,7 @@ openPopupBtn.addEventListener('click', () => {
 });
 
 filterBtn.addEventListener('click', () => {
-    const categoriasSeleccionadas = Array.from(document.querySelectorAll('input[name=categoria]:checked')).map(input => input.value);
+    var categoriasSeleccionadas = Array.from(document.querySelectorAll('input[name=categoria]:checked')).map(input => input.value);
     if (categoriasSeleccionadas.length === 0) {
         document.querySelectorAll('.resultado').forEach(resultado => resultado.style.display = 'block');
     } else {

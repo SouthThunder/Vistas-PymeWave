@@ -21,7 +21,7 @@ controller.access =(req, res)=>{
                     if(rows[i].correo==data.correo){
                         if(rows[i].contraseña==hash(data.contraseña)){
                             console.log("Bienvenido a su cuenta");
-                            res.render('initialhome');
+                            res.render('initialhome', );
                         }else{
                             console.log("Usuario o contraseña incorrectas");
                         }
